@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #3a56cc;
+    --light-color: #f8f9fc;
+    --dark-color: #2a2e3a;
+  }
+  
+  body {
+    background-color: #f5f7ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .partner-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .partner-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .partner-image-container {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  
+  .partner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 2rem;
+    background-color: transparent;
+  }
+  
+  .partner-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .partner-body {
+    padding: 2rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .partner-name {
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-size: 2rem;
+  }
+  
+  .partner-name::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+  }
+  
+  .partner-description {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+  
+  .action-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-news {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .btn-back {
+    background: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid #d1d3e2;
+  }
+  
+  .btn-back:hover {
+    background: #e2e6ea;
+    color: var(--dark-color);
+  }
+  
+  .btn-share {
+    background: var(--info-color);
+    color: white;
+  }
+  
+  .btn-share:hover {
+    background: #2aa1b7;
+    color: white;
+  }
+  
+ 
+  
+  @media (max-width: 768px) {
+    .partner-image-container {
+      height: 250px;
+    }
+    
+    .partner-name {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .partner-image-container {
+      height: 200px;
+    }
+    
+    .partner-body {
+      padding: 1.5rem;
+    }
+  }
